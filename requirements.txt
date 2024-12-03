@@ -5,3 +5,4 @@ openai
 faiss-cpu
 pandas
 streamlit
+langchain_experimental
