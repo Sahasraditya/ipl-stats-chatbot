@@ -5,8 +5,9 @@ from cricgpt_1 import cricgpt
 # Set the OpenAI API Key from the backend (e.g., an environment variable)
 # Ensure your API key is securely stored in your backend or environment variables
 #os.environ["OPENAI_API_KEY"] 
-openai_api_key = os.getenv("OPENAI_API_KEY")  # Make sure the key is stored as an environment variable
-
+# openai_api_key = os.getenv("OPENAI_API_KEY")  # Make sure the key is stored as an environment variable
+openai_api_key = st.secrets["openai_api_key"]
+os.environ["OPENAI_API_KEY"]  = openai_api_key
 
 # Check if the API key is set
 if not openai_api_key:

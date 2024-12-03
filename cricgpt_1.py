@@ -24,7 +24,9 @@ connection.close()
 
 
 def cricgpt(prompt):
-    openai_api_key = os.getenv("OPENAI_API_KEY")
+    openai_api_key = st.secrets["openai_api_key"]
+    os.environ["OPENAI_API_KEY"]  = openai_api_key
+
     db = SQLDatabase.from_uri("sqlite:///ipl_database.db")
     examples = [
         {
